@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baby Rishu's Moments 🍼</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff9c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .slideshow-container {
+      max-width: 700px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    .slide {
+      display: none;
+      padding: 30px;
+      background-color: #fefae0;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fade 2s;
+    }
+
+    .slide video {
+      width: 85%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .text {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #ff6f61;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.4;}
+      to {opacity: 1;}
+    }
+
+    .emoji {
+      font-size: 2em;
+      animation: float 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+
+    <div class="slide">
+      <video autoplay loop>
+        <source src="DJPJ4580.JPG" type="video/mp4">
+      </video>
+      <p class="text">Meet Rishu — our cutest superstar 🌟 <span class="emoji">🧸</span></p>
+    </div>
+
+    <div class="slide">
+      <video autoplay loop>
+        <source src="TPLM1631.MP4" type="video/mp4">
+      </video>
+      <p class="text">That giggle can melt anyone’s heart 💛 <span class="emoji">😄💞</span></p>
+    </div>
+
+    <div class="slide">
+      <video autoplay loop>
+        <source src="SSQJ0627.MP4" type="video/mp4">
+      </video>
+      <p class="text">Playtime is Rishu-time! 🚂 <span class="emoji">🪁🚀</span></p>
+    </div>
+
+    <div class="slide">
+      <video autoplay loop>
+        <source src="PINW1757.MP4" type="video/mp4">
+      </video>
+      <p class="text">Sweet dreams, little champ 💤 <span class="emoji">🌙🍼</span></p>
+    </div>
+
+  </div>
+
+  <div class="footer">With love for Rishu from Chachu 💙</div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3500); // Slide every 3.5 sec
+    }
+  </script>
+
+</body>
+</html>
